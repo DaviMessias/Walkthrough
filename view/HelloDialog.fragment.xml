@@ -4,5 +4,11 @@
    <Dialog
       id="helloDialog"
       title="Olá {/conteudo/nome}">
+      <beginButton>
+      <Button
+      text="{i18n>botaoFecharDialogo}"
+      press=".aoFecharDialogo"/>
+      </beginButton>
+
 </Dialog>
 </core:FragmentDefinition>

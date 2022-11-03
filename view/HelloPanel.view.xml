@@ -9,8 +9,8 @@
       <content>
       <Button 
          id="helloDiaLogButton"
-         text="{i18n>openDiaLogButtonText}"
-         press=".aoAbrirDialog"
+         text="{i18n>abrirBotaoDeDialogo}"
+         press=".aoAbrirDialogo"
          class="sapUiSmallMarginEnd"/>
       <Button
          text="{i18n>exibirBotao}"

@@ -8,6 +8,8 @@ sap.ui.define([
     "use strict";
  
     return Controller.extend("sap.ui.demo.walkthrough.controller.HelloPanel", {
+
+
        exibirBotao: function () {
           // lê a mensagem do modelo i18n 
           var oBundle = this.getView().getModel("i18n").getResourceBundle();
@@ -17,8 +19,7 @@ sap.ui.define([
           MessageToast.show(sMsg);
        },
 
-       aoAbrirDialog: function () {
-         
+       aoAbrirDialogo: function() {
             if(!this.pDialog) {
                   this.pDialog = this.loadFragment({
                         name: "sap.ui.demo.walkthrough.view.HelloDialog"
@@ -27,7 +28,10 @@ sap.ui.define([
             this.pDialog.then(function(oDialog){
                   oDialog.open();
             });
-         }
-       
+         },
+
+         aoFecharDialogo: function(){
+            this.byId("helloDialog").close();
+         },
     });
  });
