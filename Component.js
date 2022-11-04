@@ -18,7 +18,7 @@ function (UIComponent, JSONModel) {
          // define um modelo de dado
          var objetoCriado = {
             conteudo : {
-               nome: "",
+               nome: "Davi",
             }
          };
          var oModel = new JSONModel(objetoCriado);
