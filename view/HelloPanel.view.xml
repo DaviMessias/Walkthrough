@@ -22,7 +22,7 @@
             valueLiveUpdate="true"
             width="60%"/>
          <FormattedText
-            htmlText="Conteúdo: {/conteudo/nome}"
+            htmlText="Conteúdo: Olá {/conteudo/nome}"
             class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
       </content>
    </Panel>
