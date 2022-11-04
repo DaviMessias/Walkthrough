@@ -9,6 +9,7 @@
       <content>
       <Button 
          id="helloDiaLogButton"
+         icon="sap-icon://world"
          text="{i18n>abrirBotaoDeDialogo}"
          press=".aoAbrirDialogo"
          class="sapUiSmallMarginEnd"/>
@@ -21,7 +22,7 @@
             valueLiveUpdate="true"
             width="60%"/>
          <FormattedText
-            htmlText="Olá {/conteudo/nome}"
+            htmlText="Conteúdo: {/conteudo/nome}"
             class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
       </content>
    </Panel>

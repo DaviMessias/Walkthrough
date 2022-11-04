@@ -4,6 +4,12 @@
    <Dialog
       id="helloDialog"
       title="Olá {/conteudo/nome}">
+      <content>
+         <core:Icon
+            src="sap-icon://hello-world"
+            size="8rem"
+            class="sapUiMediumMargin"/>
+      </content>
       <beginButton>
       <Button
       text="{i18n>botaoFecharDialogo}"
