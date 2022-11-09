@@ -5,16 +5,16 @@
    <Panel
       headerText="{i18n>tituloPainel}"
       class="sapUiResponsiveMargin"
-      width="auto" >
+      width="auto">
       <content>
       <Button 
-         id="helloDiaLogButton"
+         id="helloDialogButton"
          icon="sap-icon://world"
          text="{i18n>abrirBotaoDeDialogo}"
          press=".aoAbrirDialogo"
          class="sapUiSmallMarginEnd"/>
       <Button
-         text="{i18n>exibirBotao}"
+         text="{i18n>mostrarTextoDoBotaoOla}"
          press=".aoClicarNoBotaoDigaOla"
          class="myCustomButton"/>
          <Input

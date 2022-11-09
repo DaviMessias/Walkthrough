@@ -1,16 +1,12 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
-    "sap/m/MessageToast",
-    "sap/ui/core/Fragment"
- ], 
- 
- function (Controller, MessageToast, Fragment) {
+    "sap/m/MessageToast"
+ ], function (Controller, MessageToast) {
     "use strict";
  
     return Controller.extend("sap.ui.demo.walkthrough.controller.HelloPanel", {
 
-
-       exibirBotao: function () {
+      aoClicarNoBotaoDigaOla: function () {
           // lê a mensagem do modelo i18n 
           var oBundle = this.getView().getModel("i18n").getResourceBundle();
           var sRecipient = this.getView().getModel().getProperty("/conteudo/nome");
@@ -19,19 +15,24 @@ sap.ui.define([
           MessageToast.show(sMsg);
        },
 
-       aoAbrirDialogo: function() {
-            if(!this.pDialog) {
+       aoAbrirDialogo : function () {
+            // create dialog lazily
+            if (!this.pDialog) {
                   this.pDialog = this.loadFragment({
                         name: "sap.ui.demo.walkthrough.view.HelloDialog"
                   });
             }
-            this.pDialog.then(function(oDialog){
+
+            this.pDialog.then(function(oDialog) {
                   oDialog.open();
             });
          },
 
-         aoFecharDialogo: function(){
+         aoFecharDialogo : function() {
+
+            
             this.byId("helloDialog").close();
-         },
+         }
     });
+
  });
