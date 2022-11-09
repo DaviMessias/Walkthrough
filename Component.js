@@ -1,28 +1,29 @@
 sap.ui.define([
    "sap/ui/core/UIComponent",
-   "sap/ui/model/json/JSONModel",
-], 
-
-function (UIComponent, JSONModel) {
+   "sap/ui/model/json/JSONModel"
+], function (UIComponent, JSONModel) {
    "use strict";
+   
    return UIComponent.extend("sap.ui.demo.walkthrough.Component", {
-      metadata : {
+
+      metadata: {
          interfaces: ["sap.ui.core.IAsyncContentCreation"],
          manifest: "json"
       },
 
-      init : function () {
+      init: function () {
          //chama a função init do pai
          UIComponent.prototype.init.apply(this, arguments);
 
          // define um modelo de dado
-         var objetoCriado = {
+         var oData = {
             conteudo : {
                nome: "Davi",
             }
          };
-         var oModel = new JSONModel(objetoCriado);
+         var oModel = new JSONModel(oData);
          this.setModel(oModel);
       }
    });
+   
 });
