@@ -2,28 +2,31 @@
    controllerName="sap.ui.demo.walkthrough.controller.HelloPanel"
    xmlns="sap.m"
    xmlns:mvc="sap.ui.core.mvc">
-   <Panel
-      headerText="{i18n>tituloPainel}"
-      class="sapUiResponsiveMargin"
-      width="auto">
-      <content>
-      <Button 
-         id="helloDialogButton"
-         icon="sap-icon://world"
-         text="{i18n>abrirBotaoDeDialogo}"
-         press=".aoAbrirDialogo"
-         class="sapUiSmallMarginEnd"/>
-      <Button
-         text="{i18n>mostrarTextoDoBotaoOla}"
-         press=".aoClicarNoBotaoDigaOla"
-         class="myCustomButton"/>
-         <Input
-            value="{/conteudo/nome}"
-            valueLiveUpdate="true"
-            width="60%"/>
-         <FormattedText
-            htmlText="Conteúdo: Olá {/conteudo/nome}"
-            class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
-      </content>
-   </Panel>
+		<Panel
+			headerText="{i18n>tituloPainel}"
+			class="sapUiResponsiveMargin"
+			width="auto"
+			expandable="{device>/system/phone}"
+			expanded="{= !${device>/system/phone} }"
+			accessibleRole="Region">
+			<content>
+			<Button 
+				id="helloDialogButton"
+				icon="sap-icon://world"
+				text="{i18n>abrirBotaoDeDialogo}"
+				press=".aoAbrirDialogo"
+				class="sapUiSmallMarginEnd sapUiVisibleOnlyOnDesktop"/>
+			<Button
+				text="{i18n>mostrarTextoDoBotaoOla}"
+				press=".aoClicarNoBotaoDigaOla"
+				class="myCustomButton"/>
+				<Input
+					value="{/conteudo/nome}"
+					valueLiveUpdate="true"
+					width="60%"/>
+				<FormattedText
+					htmlText="Conteúdo: Olá {/conteudo/nome}"
+					class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
+			</content>
+		</Panel>
 </mvc:View>
